@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-android:
-    runs-on: macos-latest-large
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: gradle/gradle-build-action@v3.1.0
