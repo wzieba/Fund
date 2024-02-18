@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
 }
@@ -43,6 +44,9 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation(libs.kotlin.serialization)
+            implementation(libs.decompose)
+            implementation(libs.kotlin.coroutines)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
